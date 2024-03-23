@@ -7,7 +7,7 @@ import SearchButton from './SearchButton'
 
 const Header = () => {
   return (
-    <header className="flex items-center border-b justify-between py-10">
+    <header className="flex items-center justify-between border-b py-10">
       <div>
         <Link href="/" aria-label={siteMetadata.title}>
           <div className="flex items-center justify-between">
@@ -15,9 +15,7 @@ const Header = () => {
               <img src={siteMetadata.siteLogo} className="w-10 h-10" />
             </div> */}
             {typeof siteMetadata.title === 'string' ? (
-              <div className="hidden h-6 text-2xl font-semibold sm:block">
-                {siteMetadata.title}
-              </div>
+              <div className="hidden h-6 text-2xl font-semibold sm:block">{siteMetadata.title}</div>
             ) : (
               siteMetadata.title
             )}

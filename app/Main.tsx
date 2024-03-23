@@ -21,7 +21,7 @@ export default function Home({ posts }) {
             <h2 className="prose pt-5 text-lg text-gray-600 dark:text-gray-300">
               👏 Welcome to &nbsp;
               <RoughNotation
-                animate="true"
+                animate={true}
                 type="circle"
                 show={true}
                 color="#DE1D8D"
@@ -29,35 +29,33 @@ export default function Home({ posts }) {
                 animationDuration={2500}
               >
                 Yak's Log.
-              </RoughNotation>&nbsp;
-              {`Here will ${siteMetadata.description}. I am a Mobile Application Developer who is passionate about Front Develop and Automation. In my free time, I like developing `}
+              </RoughNotation>
+              {`${' '}Here will ${siteMetadata.description}. I am a Mobile Application Developer who is passionate about Front Develop and Automation. In my free time, I like developing `}
               side projects and learning new technologies.
             </h2>
             <p className="pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300 sm:block md:hidden lg:hidden">
               This is my place for{' '}
               <RoughNotation
-                animate="true"
+                animate={true}
                 type="box"
                 show={true}
                 color="#DE1D8D"
                 animationDelay={1000}
                 animationDuration={2500}
-                className="text-slate-200"
               >
-                thoughts, reflections & everything&nbsp;
+                thoughts, reflections & everything
               </RoughNotation>
-              {' '}in between. Have a good read!
+              in between. Have a good read!
             </p>
             <p className="hidden pt-10 text-lg leading-7 text-slate-600 dark:text-slate-300 md:block">
               This is my place for{' '}
               <RoughNotation
-                animate="true"
+                animate={true}
                 type="highlight"
                 show={true}
                 color="#DE1D8D"
                 animationDelay={1000}
                 animationDuration={2500}
-                className="text-slate-200"
               >
                 thoughts, reflections & everything&nbsp;
               </RoughNotation>
@@ -185,9 +183,7 @@ export default function Home({ posts }) {
                             d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
                           />
                         </svg>
-                        <span className="pr-6 text-gray-900 dark:text-gray-100">
-                          About Me!
-                        </span>
+                        <span className="pr-6 text-gray-900 dark:text-gray-100">About Me!</span>
                       </span>
                       <span className="pl-6 text-primary-400 transition duration-200 group-hover:text-gray-900 dark:group-hover:text-gray-100">
                         About&nbsp;&rarr;
@@ -203,16 +199,29 @@ export default function Home({ posts }) {
       <div>
         <div className="grid md:grid-cols-4">
           <div>
-            <img className="rounded-lg -rotate-12 hover:scale-125 transition-all duration-500 cursor-pointer" src="/static/images/photos/IMG_1313.jpg" alt="" />
+            <img
+              className="-rotate-12 cursor-pointer rounded-lg transition-all duration-500 hover:scale-125"
+              src="/static/images/photos/IMG_1313.jpg"
+            />
           </div>
           <div>
-            <img className="rounded-lg -rotate-45 hover:scale-125 transition-all duration-500 cursor-pointer" src="/static/images/photos/IMG_1017.jpg" alt="" />
+            <img
+              className="-rotate-45 cursor-pointer rounded-lg transition-all duration-500 hover:scale-125"
+              src="/static/images/photos/IMG_1017.jpg"
+            />
           </div>
           <div>
-            <img className="rounded-lg rotate-12 hover:scale-125 transition-all duration-500 cursor-pointer" src="/static/images/photos/IMG_1027.jpg" alt="" />
+            <img
+              className="rotate-12 cursor-pointer rounded-lg transition-all duration-500 hover:scale-125"
+              src="/static/images/photos/IMG_1027.jpg"
+              alt=""
+            />
           </div>
           <div>
-            <img className="rounded-lg rotate-45 hover:scale-125 transition-all duration-500 cursor-pointer" src="/static/images/photos/IMG_1524.jpg" alt="" />
+            <img
+              className="rotate-45 cursor-pointer rounded-lg transition-all duration-500 hover:scale-125"
+              src="/static/images/photos/IMG_1524.jpg"
+            />
           </div>
         </div>
       </div>
@@ -233,8 +242,11 @@ export default function Home({ posts }) {
             return (
               <li key={slug} className="py-5">
                 <article>
-                  <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-top xl:space-y-0">
-                    <img className="xl:col-span-1 rounded-lg object-cover size-52 hover:scale-105 transition-all duration-500 cursor-pointer" src={cover} />
+                  <div className="xl:items-top space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0">
+                    <img
+                      className="size-52 cursor-pointer rounded-lg object-cover transition-all duration-500 hover:scale-105 xl:col-span-1"
+                      src={cover}
+                    />
                     <div className="space-y-5 xl:col-span-3">
                       <div className="space-y-6">
                         <div>
@@ -242,11 +254,11 @@ export default function Home({ posts }) {
                             <h2 className="text-2xl font-bold leading-8 tracking-tight">
                               <Link
                                 href={`/blog/${slug}`}
-                                className="text-gray-900 dark:text-gray-100   
+                                className="inline-block cursor-pointer   
+                                text-gray-900  
                                 hover:text-sky-500  
-                                inline-block  
                                 hover:duration-300  
-                                cursor-pointer"
+                                dark:text-gray-100"
                               >
                                 {title}
                               </Link>

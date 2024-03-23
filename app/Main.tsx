@@ -112,7 +112,7 @@ export default function Home({ posts }) {
                         <span className="pr-3 text-gray-900 dark:text-gray-100">👨‍💻 Built</span>
                       </span>
                       <span className="pl-6 text-amber-400 transition duration-200 group-hover:text-gray-900 dark:group-hover:text-gray-100">
-                        Demos &rarr;
+                        Demos&rarr;
                       </span>
                     </span>
                   </Link>
@@ -127,7 +127,7 @@ export default function Home({ posts }) {
                         <span className="pr-3 text-gray-900 dark:text-gray-100">🧑‍🚀 Read</span>
                       </span>
                       <span className="pl-6 text-indigo-400 transition duration-200 group-hover:text-gray-900 dark:group-hover:text-gray-100">
-                      Blog &rarr;
+                        Blog&rarr;
                       </span>
                     </span>
                   </Link>
@@ -142,7 +142,7 @@ export default function Home({ posts }) {
                         <span className="pr-3 text-gray-900 dark:text-gray-100">🤭 About</span>
                       </span>
                       <span className="pl-6 text-primary-400 transition duration-200 group-hover:text-gray-900 dark:group-hover:text-gray-100">
-                      Me &rarr;
+                        Me&rarr;
                       </span>
                     </span>
                   </Link>

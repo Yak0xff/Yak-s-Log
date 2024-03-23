@@ -124,7 +124,7 @@ export default function Home({ posts }) {
                   <Link href="/tags/随笔">
                     <span className="relative flex items-center divide-x divide-gray-600 rounded-lg bg-white px-7 py-4 leading-none dark:bg-black">
                       <span className="flex items-center space-x-5">
-                        <span className="pr-3 text-gray-900 dark:text-gray-100">🧑‍🚀  Read </span>
+                        <span className="pr-3 text-gray-900 dark:text-gray-100">🧑‍🚀 Read</span>
                       </span>
                       <span className="pl-6 text-indigo-400 transition duration-200 group-hover:text-gray-900 dark:group-hover:text-gray-100">
                       Blog&nbsp;&rarr;
@@ -139,7 +139,7 @@ export default function Home({ posts }) {
                   <Link href="/about">
                     <span className="relative flex items-center divide-x divide-gray-600 rounded-lg bg-white px-7 py-4 leading-none dark:bg-black">
                       <span className="flex items-center space-x-5">
-                        <span className="pr-3 text-gray-900 dark:text-gray-100">🤭  About</span>
+                        <span className="pr-3 text-gray-900 dark:text-gray-100">🤭 About</span>
                       </span>
                       <span className="pl-6 text-primary-400 transition duration-200 group-hover:text-gray-900 dark:group-hover:text-gray-100">
                       Me&nbsp;&rarr;

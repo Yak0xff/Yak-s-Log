@@ -127,7 +127,7 @@ export default function Home({ posts }) {
                         <span className="pr-3 text-gray-900 dark:text-gray-100">🧑‍🚀&nbsp;&nbsp;Read </span>
                       </span>
                       <span className="pl-6 text-indigo-400 transition duration-200 group-hover:text-gray-900 dark:group-hover:text-gray-100">
-                      Logs&nbsp;&rarr;
+                      Blog&nbsp;&rarr;
                       </span>
                     </span>
                   </Link>

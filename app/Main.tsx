@@ -9,29 +9,6 @@ import Projects from './projects/page'
 const MAX_DISPLAY = 3
 
 export default function Home({ posts }) {
-  const ImageGallery = <div className="grid md:grid-cols-4">
-    <div>
-      <img
-        className="-rotate-12 cursor-pointer rounded-lg transition-all duration-500 hover:scale-125"
-        src="/static/images/photos/IMG_1313.jpg" />
-    </div>
-    <div>
-      <img
-        className="-rotate-45 cursor-pointer rounded-lg transition-all duration-500 hover:scale-125"
-        src="/static/images/photos/IMG_1017.jpg" />
-    </div>
-    <div>
-      <img
-        className="rotate-12 cursor-pointer rounded-lg transition-all duration-500 hover:scale-125"
-        src="/static/images/photos/IMG_1027.jpg"
-        alt="" />
-    </div>
-    <div>
-      <img
-        className="rotate-45 cursor-pointer rounded-lg transition-all duration-500 hover:scale-125"
-        src="/static/images/photos/IMG_1524.jpg" />
-    </div>
-  </div>
   return (
     <>
       <div>
@@ -176,7 +153,29 @@ export default function Home({ posts }) {
         </div>
       </div>
       <div>
-        {ImageGallery}
+        <div className="grid md:grid-cols-4">
+          <div>
+            <img
+              className="-rotate-12 cursor-pointer rounded-lg transition-all duration-500 hover:scale-125"
+              src="/static/images/photos/IMG_1313.jpg" />
+          </div>
+          <div>
+            <img
+              className="-rotate-45 cursor-pointer rounded-lg transition-all duration-500 hover:scale-125"
+              src="/static/images/photos/IMG_1017.jpg" />
+          </div>
+          <div>
+            <img
+              className="rotate-12 cursor-pointer rounded-lg transition-all duration-500 hover:scale-125"
+              src="/static/images/photos/IMG_1027.jpg"
+              alt="" />
+          </div>
+          <div>
+            <img
+              className="rotate-45 cursor-pointer rounded-lg transition-all duration-500 hover:scale-125"
+              src="/static/images/photos/IMG_1524.jpg" />
+          </div>
+        </div>
       </div>
 
       <div className="divide-y divide-gray-200 dark:divide-gray-700">

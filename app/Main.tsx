@@ -5,6 +5,7 @@ import { formatDate } from 'pliny/utils/formatDate'
 import NewsletterForm from 'pliny/ui/NewsletterForm'
 import { RoughNotation } from 'react-rough-notation'
 import Projects from './projects/page'
+import Image from 'next/image'
 
 const MAX_DISPLAY = 3
 
@@ -155,25 +156,40 @@ export default function Home({ posts }) {
       <div>
         <div className="grid md:grid-cols-4">
           <div>
-            <img
+            <Image
+              src="/static/images/photos/IMG_1313.jpg"
+              width={560}
+              height={620}
               className="-rotate-12 cursor-pointer rounded-lg transition-all duration-500 hover:scale-125"
-              src="/static/images/photos/IMG_1313.jpg" />
+              alt=""
+            />
           </div>
           <div>
-            <img
+            <Image
+              src="/static/images/photos/IMG_1017.jpg"
+              width={560}
+              height={620}
               className="-rotate-45 cursor-pointer rounded-lg transition-all duration-500 hover:scale-125"
-              src="/static/images/photos/IMG_1017.jpg" />
+              alt=""
+            />
           </div>
           <div>
-            <img
-              className="rotate-12 cursor-pointer rounded-lg transition-all duration-500 hover:scale-125"
+            <Image
               src="/static/images/photos/IMG_1027.jpg"
-              alt="" />
+              width={560}
+              height={620}
+              className="rotate-12 cursor-pointer rounded-lg transition-all duration-500 hover:scale-125"
+              alt=""
+            />
           </div>
           <div>
-            <img
+            <Image
+              src="/static/images/photos/IMG_1524.jpg"
+              width={560}
+              height={620}
               className="rotate-45 cursor-pointer rounded-lg transition-all duration-500 hover:scale-125"
-              src="/static/images/photos/IMG_1524.jpg" />
+              alt=""
+            />
           </div>
         </div>
       </div>
@@ -195,9 +211,12 @@ export default function Home({ posts }) {
               <li key={slug} className="py-5">
                 <article>
                   <div className="xl:items-top space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0">
-                    <img
-                      className="size-52 cursor-pointer rounded-lg object-cover transition-all duration-500 hover:scale-105 xl:col-span-1"
+                    <Image
                       src={cover}
+                      width={560}
+                      height={620}
+                      className="size-52 cursor-pointer rounded-lg object-cover transition-all duration-500 hover:scale-105 xl:col-span-1"
+                      alt=""
                     />
                     <div className="space-y-5 xl:col-span-3">
                       <div className="space-y-6">

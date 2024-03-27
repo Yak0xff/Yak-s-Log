@@ -12,7 +12,7 @@ import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
 
 // Vercel Analytics
-import { Analytics as VercelAnalytics } from '@vercel/analytics/react';
+import { Analytics as VercelAnalytics } from '@vercel/analytics/react'
 
 const space_grotesk = Space_Grotesk({
   subsets: ['latin'],

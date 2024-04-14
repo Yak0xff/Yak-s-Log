@@ -1,5 +1,5 @@
 import { genPageMetadata } from 'app/seo'
-import GitHubControbute from '@/components/learnings/controbute';
+import GitHubControbute from '@/components/learnings/controbute'
 
 export const metadata = genPageMetadata({ title: 'Learning' })
 

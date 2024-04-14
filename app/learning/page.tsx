@@ -1,7 +1,4 @@
 import { genPageMetadata } from 'app/seo'
-import learningData from '@/data/learningData'
-import Image from 'next/image'
-import Link from 'next/link'
 import GitHubControbute from '@/components/learnings/controbute';
 
 export const metadata = genPageMetadata({ title: 'Learning' })

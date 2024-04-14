@@ -11,12 +11,12 @@ const GitHubControbute = () => {
     });
 
     const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-    let dayList = [];
+    let dayList: any[] = [];
     days.forEach((day, index) => {
         dayList.push(<li key={index}>{day}</li>);
     });
 
-    let levelList = [];
+    let levelList: any[] = [];
     for (var i = 1; i < 365; i++) {
         const level = Math.floor(Math.random() * 3);
         levelList.push(<li key={i} data-level={level} className='tooltip'><span className="tooltiptext">

@@ -53,7 +53,7 @@ const GitHubControbute = () => {
     <>
       <div className="pt-6 text-center xl:pb-4">
         <Link
-          href={`http://localhost:3000/learning`}
+          href={`https://gist.github.com/Yak0xff/db13656ee00a7e55fdb4e1b0ee61d3d4`}
           className="inline-block cursor-pointer
                                 text-gray-900
                                 hover:text-sky-500

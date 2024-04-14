@@ -5,7 +5,7 @@ import '/css/contribute.css'
 
 const GitHubControbute = () => {
     const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    let monthList = [];
+    let monthList: any[] = [];
     months.forEach((month, index) => {
         monthList.push(<li key={index}>{month}</li>);
     });

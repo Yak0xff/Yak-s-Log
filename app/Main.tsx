@@ -7,7 +7,7 @@ import { RoughNotation } from 'react-rough-notation'
 import Projects from './projects/page'
 import Image from 'next/image'
 
-const MAX_DISPLAY = 3
+const MAX_DISPLAY = 5
 
 export default function Home({ posts }) {
   return (

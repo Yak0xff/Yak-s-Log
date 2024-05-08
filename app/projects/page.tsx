@@ -1,6 +1,7 @@
 import projectsData from '@/data/projectsData'
 import Card from '@/components/Card'
 import { genPageMetadata } from 'app/seo'
+import GitHubControbute from '@/components/learnings/controbute'
 
 export const metadata = genPageMetadata({ title: 'Demos' })
 
@@ -16,6 +17,7 @@ export default function Projects() {
             My Some side Demos with next.js and tailwindcss. Maybe include others.
           </p>
         </div>
+        <GitHubControbute />
         <div className="container py-12">
           <div className="-m-4 flex flex-wrap">
             {projectsData.map((d) => (

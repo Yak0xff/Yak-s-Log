@@ -256,9 +256,7 @@ export default function Home({ posts }) {
           <NewsletterForm />
         </div>
       )} */}
-      <div>
-        
-      </div>
+      <div></div>
     </>
   )
 }

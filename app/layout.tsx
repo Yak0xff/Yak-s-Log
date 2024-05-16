@@ -13,7 +13,6 @@ import { Metadata } from 'next'
 
 // Vercel Analytics
 import { Analytics } from '@vercel/analytics/react'
-import EnableGoogleAdsense from '@/components/ads'
 
 const space_grotesk = Space_Grotesk({
   subsets: ['latin'],

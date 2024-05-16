@@ -170,10 +170,11 @@ export default function Home({ posts }) {
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pb-8 pt-6 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-2xl sm:leading-10 md:text-4xl md:leading-14">
-            最近文章
+            Recent Post
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            {siteMetadata.description}
+            {/* {siteMetadata.description} */}
+            人们会被自己热爱的事物改变，而没有人因为给予而贫穷。
           </p>
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">

@@ -125,8 +125,8 @@ export default function Home({ posts }) {
           </div>
         </div>
       </div>
-      {/* 四张图片 */}
-      <div>
+
+      {/* <div>
         <div className="grid md:grid-cols-4">
           <div>
             <Image
@@ -165,12 +165,12 @@ export default function Home({ posts }) {
             />
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Latest Logs
+          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-2xl sm:leading-10 md:text-4xl md:leading-14">
+            最近文章
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
             {siteMetadata.description}
@@ -188,14 +188,14 @@ export default function Home({ posts }) {
                       src={cover}
                       width={560}
                       height={620}
-                      className="size-52 cursor-pointer rounded-lg object-cover transition-all duration-500 hover:scale-105 xl:col-span-1"
+                      className="size-52 cursor-pointer rounded-lg border border-red-100 object-cover transition-all duration-300 hover:scale-105 xl:col-span-1"
                       alt=""
                     />
                     <div className="space-y-5 xl:col-span-3">
                       <div className="space-y-6">
                         <div>
                           <div>
-                            <h2 className="text-2xl font-bold leading-8 tracking-tight">
+                            <h2 className="text-xl font-bold leading-8 tracking-tight">
                               <Link
                                 href={`/blog/${slug}`}
                                 className="inline-block cursor-pointer   
@@ -207,21 +207,21 @@ export default function Home({ posts }) {
                                 {title}
                               </Link>
                             </h2>
-                            <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-200">
+                            <dd className="font-small pt-2 text-base leading-6 text-gray-500 dark:text-gray-200">
                               <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
                             </dd>
                           </div>
-                          <div className="flex flex-wrap py-2">
+                          <div className="flex flex-wrap pt-1">
                             {tags.map((tag) => (
                               <Tag key={tag} text={tag} />
                             ))}
                           </div>
                         </div>
-                        <div className="prose max-w-none text-gray-500 dark:text-gray-400">
+                        <div className="prose prose-stone max-w-none text-gray-600 dark:text-gray-400">
                           {summary}
                         </div>
                       </div>
-                      <div className="text-base font-medium leading-6">
+                      <div className="font-small text-base leading-6">
                         <Link
                           href={`/blog/${slug}`}
                           className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"

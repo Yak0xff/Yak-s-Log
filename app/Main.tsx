@@ -6,8 +6,11 @@ import { formatDate } from 'pliny/utils/formatDate'
 import { RoughNotation } from 'react-rough-notation'
 import Projects from './projects/page'
 import Image from 'next/image'
+import QuoteCardCarousel from '@/components/ui/QuoteCardCarousel'
 
 const MAX_DISPLAY = 5
+
+const slides = ['./static/images/photos/IMG_1027.jpg', './static/images/photos/IMG_1017.jpg']
 
 export default function Home({ posts }) {
   return (
@@ -166,6 +169,8 @@ export default function Home({ posts }) {
           </div>
         </div>
       </div> */}
+
+      <QuoteCardCarousel />
 
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pb-8 pt-6 md:space-y-5">

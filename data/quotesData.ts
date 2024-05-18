@@ -2,7 +2,7 @@ interface Quote {
   index: number,
   content: string,
   author: string,
-  link: string
+  link?: string
 }
 
 const quotesData: Quote[] = [ 
@@ -23,6 +23,12 @@ const quotesData: Quote[] = [
     content: '穷不倒志，富不癫狂。',
     author: `@Globe Explorer`,
     link: `https://explorer.globe.engineer/search?qd=%5B%7B%22searchbox_query%22%3A%22%E7%A9%B7%E4%B8%8D%E5%80%92%E5%BF%97%EF%BC%8C%E5%AF%8C%E4%B8%8D%E7%99%AB%E7%8B%82%22%2C%22search_id%22%3A%224151e8f9-58a2-4405-9e80-ae9d83442eb6%22%2C%22index%22%3A0%2C%22type%22%3A%22initial_searchbox%22%2C%22clicked_category%22%3Anull%2C%22staged_image%22%3Anull%7D%5D&sid=4151e8f9-58a2-4405-9e80-ae9d83442eb6`
+  },
+  {
+    index: 4,
+    content: 'Time is what we want most, but what we use worse.',
+    author: `@William Penn`,
+    link: ''
   }
 ]
 

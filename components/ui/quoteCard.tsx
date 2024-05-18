@@ -27,9 +27,13 @@ const QuoteCard = ({ content, author, link }) => (
       <footer className="mt-6">
         <div className="text-base font-semibold text-gray-800 dark:text-gray-100">
           via{' '}
-          <Link className="text-blue-600" target="__blank" href={link}>
-            {author}
-          </Link>
+          {link === '' ? (
+            <span>{author}</span>
+          ) : (
+            <Link className="text-blue-600" target="__blank" href={link}>
+              {author}
+            </Link>
+          )}
         </div>
       </footer>
     </blockquote>

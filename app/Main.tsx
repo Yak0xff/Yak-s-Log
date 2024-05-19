@@ -170,7 +170,6 @@ export default function Home({ posts }) {
         </div>
       </div> */}
 
-      
       <QuoteCardCarousel />
 
       <div className="divide-y divide-gray-200 dark:divide-gray-700">

@@ -22,6 +22,7 @@
     "embla-carousel-autoplay": "8.1.1",
     "embla-carousel-react": "8.1.1",
     "esbuild": "0.18.11",
+    "framer-motion": "^12.12.2",
     "github-slugger": "^2.0.0",
     "gray-matter": "^4.0.2",
     "image-size": "1.0.0",

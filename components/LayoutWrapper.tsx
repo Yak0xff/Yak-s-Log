@@ -3,6 +3,8 @@ import SectionContainer from './SectionContainer'
 import Footer from './Footer'
 import { ReactNode } from 'react'
 import Header from './Header'
+import { motion } from 'framer-motion'
+import ScrollProgress from './ScrollProgress'
 
 interface Props {
   children: ReactNode
@@ -10,14 +12,23 @@ interface Props {
 
 const inter = Inter({
   subsets: ['latin'],
+  display: 'swap',
 })
 
 const LayoutWrapper = ({ children }: Props) => {
   return (
     <SectionContainer>
-      <div className={`${inter.className} flex h-screen flex-col justify-between font-sans`}>
+      <ScrollProgress />
+      <div className={`${inter.className} flex min-h-screen flex-col justify-between font-sans`}>
         <Header />
-        <main className="mb-auto">{children}</main>
+        <motion.main 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12"
+        >
+          {children}
+        </motion.main>
         <Footer />
       </div>
     </SectionContainer>

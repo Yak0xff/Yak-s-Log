@@ -6,7 +6,6 @@ import { formatDate } from 'pliny/utils/formatDate'
 import { RoughNotation } from 'react-rough-notation'
 import Projects from './projects/page'
 import Image from 'next/image'
-import QuoteCardCarousel from '@/components/ui/QuoteCardCarousel'
 
 const MAX_DISPLAY = 5
 
@@ -15,14 +14,14 @@ const slides = ['./static/images/photos/IMG_1027.jpg', './static/images/photos/I
 export default function Home({ posts }) {
   return (
     <>
-      <div>
-        <div className="mb-12 flex flex-col items-center gap-x-12 xl:flex-row">
-          <div className="pt-6">
-            <h1 className="pb-6 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-8 flex flex-col items-center gap-8 sm:mb-12 sm:gap-12 lg:flex-row lg:px-0">
+          <div className="w-full pt-6 lg:w-1/2">
+            <h1 className="pb-4 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14 lg:text-6xl">
               Hi, I am{' '}
               <span className="text-primary-color-500 dark:text-primary-color-dark-500">Yak</span>
             </h1>
-            <h2 className="prose pt-5 text-lg text-gray-600 dark:text-gray-300">
+            <h2 className="prose pt-4 text-base text-gray-600 dark:text-gray-300 sm:text-lg">
               👏 Welcome to &nbsp;
               <RoughNotation
                 animate={true}
@@ -37,7 +36,7 @@ export default function Home({ posts }) {
               {`${' '}Here will ${siteMetadata.description}. I am a Mobile Application Developer who is passionate about Front Develop and Automation. In my free time, I like developing `}
               side projects and learning new technologies.
             </h2>
-            <p className="pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300 sm:block md:hidden lg:hidden">
+            <p className="pt-4 text-base leading-7 text-slate-600 dark:text-slate-300 md:hidden sm:text-lg">
               This is my place for{' '}
               <RoughNotation
                 animate={true}
@@ -51,7 +50,7 @@ export default function Home({ posts }) {
               </RoughNotation>
               in between. Have a good read!
             </p>
-            <p className="hidden pt-10 text-lg leading-7 text-slate-600 dark:text-slate-300 md:block">
+            <p className="hidden pt-6 text-base leading-7 text-slate-600 dark:text-slate-300 md:block sm:text-lg">
               This is my place for{' '}
               <RoughNotation
                 animate={true}
@@ -64,7 +63,7 @@ export default function Home({ posts }) {
                 thoughts, reflections & everything&nbsp;
               </RoughNotation>
               in between. Have a good read!{' '}
-              <div className="mt-8 text-slate-600 dark:text-slate-400">
+              <div className="mt-6 text-slate-600 dark:text-slate-400">
                 <span className="text-sm">Press</span>{' '}
                 <span className="rounded-md bg-gray-300 p-1 text-sm text-gray-900 dark:bg-gray-400">
                   ⌘
@@ -77,172 +76,114 @@ export default function Home({ posts }) {
               </div>
             </p>
           </div>
-          <div className="flex items-center justify-center">
-            <div className="grid grid-cols-1 grid-rows-3 gap-8 py-12">
-              <div className="my-2 grid items-start gap-8">
-                <div className="group relative">
-                  <div className="animate-tilt absolute -inset-0.5 rounded-lg bg-gradient-to-r from-pink-600 to-purple-600 opacity-50 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
-                  <Link href="/projects">
-                    <span className="relative flex items-center divide-x divide-gray-600 rounded-lg bg-white px-7 py-4 leading-none dark:bg-black">
-                      <span className="flex items-center space-x-5">
-                        <span className="pr-3 text-gray-900 dark:text-gray-100">👨‍💻 Built</span>
-                      </span>
-                      <span className="pl-6 text-amber-400 transition duration-200 group-hover:text-gray-900 dark:group-hover:text-gray-100">
-                        Demos&rarr;
-                      </span>
+          <div className="w-full lg:w-1/2">
+            <div className="grid grid-cols-1 gap-4 py-8 sm:gap-6 sm:py-12">
+              <div className="group relative">
+                <div className="animate-tilt absolute -inset-0.5 rounded-lg bg-gradient-to-r from-pink-600 to-purple-600 opacity-50 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
+                <Link href="/projects">
+                  <span className="relative flex items-center divide-x divide-gray-600 rounded-lg bg-white px-4 py-3 leading-none dark:bg-black sm:px-7 sm:py-4">
+                    <span className="flex items-center space-x-3 sm:space-x-5">
+                      <span className="pr-2 text-sm text-gray-900 dark:text-gray-100 sm:pr-3 sm:text-base">👨‍💻 Built</span>
                     </span>
-                  </Link>
-                </div>
+                    <span className="pl-4 text-sm text-amber-400 transition duration-200 group-hover:text-gray-900 dark:group-hover:text-gray-100 sm:pl-6 sm:text-base">
+                      Demos&rarr;
+                    </span>
+                  </span>
+                </Link>
               </div>
-              <div className="my-2 grid items-start gap-8">
-                <div className="group relative">
-                  <div className="animate-tilt absolute -inset-0.5 rounded-lg bg-gradient-to-r from-fuchsia-600 to-emerald-600 opacity-50 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
-                  <Link href="/blog">
-                    <span className="relative flex items-center divide-x divide-gray-600 rounded-lg bg-white px-7 py-4 leading-none dark:bg-black">
-                      <span className="flex items-center space-x-5">
-                        <span className="pr-3 text-gray-900 dark:text-gray-100">🧑‍🚀 Read</span>
-                      </span>
-                      <span className="pl-6 text-indigo-400 transition duration-200 group-hover:text-gray-900 dark:group-hover:text-gray-100">
-                        Blog&rarr;
-                      </span>
+              <div className="group relative">
+                <div className="animate-tilt absolute -inset-0.5 rounded-lg bg-gradient-to-r from-fuchsia-600 to-emerald-600 opacity-50 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
+                <Link href="/blog">
+                  <span className="relative flex items-center divide-x divide-gray-600 rounded-lg bg-white px-4 py-3 leading-none dark:bg-black sm:px-7 sm:py-4">
+                    <span className="flex items-center space-x-3 sm:space-x-5">
+                      <span className="pr-2 text-sm text-gray-900 dark:text-gray-100 sm:pr-3 sm:text-base">🧑‍🚀 Read</span>
                     </span>
-                  </Link>
-                </div>
+                    <span className="pl-4 text-sm text-indigo-400 transition duration-200 group-hover:text-gray-900 dark:group-hover:text-gray-100 sm:pl-6 sm:text-base">
+                      Blog&rarr;
+                    </span>
+                  </span>
+                </Link>
               </div>
-              <div className="my-2 grid items-start gap-8">
-                <div className="group relative">
-                  <div className="animate-tilt absolute -inset-0.5 rounded-lg bg-gradient-to-r  from-pink-600 to-purple-600 opacity-50 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
-                  <Link href="/about">
-                    <span className="relative flex items-center divide-x divide-gray-600 rounded-lg bg-white px-7 py-4 leading-none dark:bg-black">
-                      <span className="flex items-center space-x-5">
-                        <span className="pr-3 text-gray-900 dark:text-gray-100">🤭 About</span>
-                      </span>
-                      <span className="pl-6 text-primary-400 transition duration-200 group-hover:text-gray-900 dark:group-hover:text-gray-100">
-                        Me&rarr;
-                      </span>
+              <div className="group relative">
+                <div className="animate-tilt absolute -inset-0.5 rounded-lg bg-gradient-to-r from-pink-600 to-purple-600 opacity-50 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
+                <Link href="/about">
+                  <span className="relative flex items-center divide-x divide-gray-600 rounded-lg bg-white px-4 py-3 leading-none dark:bg-black sm:px-7 sm:py-4">
+                    <span className="flex items-center space-x-3 sm:space-x-5">
+                      <span className="pr-2 text-sm text-gray-900 dark:text-gray-100 sm:pr-3 sm:text-base">🤭 About</span>
                     </span>
-                  </Link>
-                </div>
+                    <span className="pl-4 text-sm text-primary-400 transition duration-200 group-hover:text-gray-900 dark:group-hover:text-gray-100 sm:pl-6 sm:text-base">
+                      Me&rarr;
+                    </span>
+                  </span>
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* <div>
-        <div className="grid md:grid-cols-4">
-          <div>
-            <Image
-              src="/static/images/photos/IMG_1313.jpg"
-              width={560}
-              height={620}
-              className="-rotate-12 cursor-pointer rounded-lg transition-all duration-500 hover:scale-125"
-              alt=""
-            />
-          </div>
-          <div>
-            <Image
-              src="/static/images/photos/IMG_1017.jpg"
-              width={560}
-              height={620}
-              className="-rotate-45 cursor-pointer rounded-lg transition-all duration-500 hover:scale-125"
-              alt=""
-            />
-          </div>
-          <div>
-            <Image
-              src="/static/images/photos/IMG_1027.jpg"
-              width={560}
-              height={620}
-              className="rotate-12 cursor-pointer rounded-lg transition-all duration-500 hover:scale-125"
-              alt=""
-            />
-          </div>
-          <div>
-            <Image
-              src="/static/images/photos/IMG_1524.jpg"
-              width={560}
-              height={620}
-              className="rotate-45 cursor-pointer rounded-lg transition-all duration-500 hover:scale-125"
-              alt=""
-            />
-          </div>
-        </div>
-      </div> */}
-
-      <QuoteCardCarousel />
-
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-2xl sm:leading-10 md:text-4xl md:leading-14">
+        <div className="space-y-2 px-4 pb-8 pt-6 sm:px-0 md:space-y-5">
+          <h1 className="text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-14">
             Recent Post
           </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            {/* {siteMetadata.description} */}
+          <p className="text-base leading-7 text-gray-500 dark:text-gray-400 sm:text-lg">
             人们会被自己热爱的事物改变，而没有人因为给予而贫穷。
           </p>
         </div>
-        <ul className="divide-y divide-gray-200 dark:divide-gray-700">
-          {!posts.length && 'No posts found.'}
+        {!posts.length && 'No posts found.'}
+        <div className="grid grid-cols-1 gap-6 px-4 py-8 sm:grid-cols-2 sm:px-0 lg:grid-cols-3">
           {posts.slice(0, MAX_DISPLAY).map((post) => {
             const { slug, date, cover, title, summary, tags } = post
             return (
-              <li key={slug} className="py-5">
-                <article>
-                  <div className="xl:items-top space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0">
-                    <Image
-                      src={cover}
-                      width={560}
-                      height={620}
-                      className="size-52 cursor-pointer rounded-lg border border-red-100 object-cover transition-all duration-300 hover:scale-105 xl:col-span-1"
-                      alt=""
-                    />
-                    <div className="space-y-5 xl:col-span-3">
-                      <div className="space-y-6">
-                        <div>
-                          <div>
-                            <h2 className="text-xl font-bold leading-8 tracking-tight">
-                              <Link
-                                href={`/blog/${slug}`}
-                                className="inline-block cursor-pointer   
-                                text-gray-900  
-                                hover:text-sky-500  
-                                hover:duration-300  
-                                dark:text-gray-100"
-                              >
-                                {title}
-                              </Link>
-                            </h2>
-                            <dd className="font-small pt-2 text-base leading-6 text-gray-500 dark:text-gray-200">
-                              <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
-                            </dd>
-                          </div>
-                          <div className="flex flex-wrap pt-1">
-                            {tags.map((tag) => (
-                              <Tag key={tag} text={tag} />
-                            ))}
-                          </div>
-                        </div>
-                        <div className="prose prose-stone max-w-none text-gray-600 dark:text-gray-400">
-                          {summary}
-                        </div>
-                      </div>
-                      <div className="font-small text-base leading-6">
-                        <Link
-                          href={`/blog/${slug}`}
-                          className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-                          aria-label={`Read more: "${title}"`}
-                        >
-                          Read more &rarr;
-                        </Link>
-                      </div>
+              <article key={slug} className="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white transition-all duration-300 hover:shadow-lg dark:border-gray-700 dark:bg-gray-800">
+                <Link href={`/blog/${slug}`} className="relative block aspect-[4/3] overflow-hidden">
+                  <Image
+                    src={cover}
+                    width={560}
+                    height={420}
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    alt={title}
+                  />
+                </Link>
+                <div className="flex flex-1 flex-col p-4 sm:p-6">
+                  <div className="flex-1">
+                    <div className="mb-2 flex items-center justify-between">
+                      <time className="text-xs text-gray-500 dark:text-gray-400 sm:text-sm">
+                        {formatDate(date, siteMetadata.locale)}
+                      </time>
                     </div>
+                    <h2 className="mb-2 text-lg font-bold leading-8 tracking-tight sm:text-xl">
+                      <Link
+                        href={`/blog/${slug}`}
+                        className="text-gray-900 hover:text-sky-500 hover:duration-300 dark:text-gray-100"
+                      >
+                        {title}
+                      </Link>
+                    </h2>
+                    <div className="mb-3 flex flex-wrap gap-1 sm:mb-4 sm:gap-2">
+                      {tags.map((tag) => (
+                        <Tag key={tag} text={tag} />
+                      ))}
+                    </div>
+                    <p className="prose prose-stone mb-3 max-w-none text-sm text-gray-600 dark:text-gray-400 line-clamp-3 sm:mb-4 sm:text-base">
+                      {summary}
+                    </p>
                   </div>
-                </article>
-              </li>
+                  <div className="mt-auto">
+                    <Link
+                      href={`/blog/${slug}`}
+                      className="text-sm text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 sm:text-base"
+                      aria-label={`Read more: "${title}"`}
+                    >
+                      Read more &rarr;
+                    </Link>
+                  </div>
+                </div>
+              </article>
             )
           })}
-        </ul>
+        </div>
       </div>
       {posts.length > MAX_DISPLAY && (
         <div className="flex justify-end text-base font-medium leading-6">

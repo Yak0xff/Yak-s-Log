@@ -33,7 +33,7 @@ export default function Home({ posts }) {
               >
                 Yak's Log.
               </RoughNotation>
-              {`${' '} `}
+              {`${' '}`}
               <br />
               <br />
               这里记录着各种生活小点滴，希望你能
@@ -69,7 +69,9 @@ export default function Home({ posts }) {
                 <Link href="/projects">
                   <span className="relative flex items-center divide-x divide-gray-600 rounded-lg bg-white px-4 py-3 leading-none dark:bg-black sm:px-7 sm:py-4">
                     <span className="flex items-center space-x-3 sm:space-x-5">
-                      <span className="pr-2 text-sm text-gray-900 dark:text-gray-100 sm:pr-3 sm:text-base">👨‍💻 Built</span>
+                      <span className="pr-2 text-sm text-gray-900 dark:text-gray-100 sm:pr-3 sm:text-base">
+                        👨‍💻 Built
+                      </span>
                     </span>
                     <span className="pl-4 text-sm text-amber-400 transition duration-200 group-hover:text-gray-900 dark:group-hover:text-gray-100 sm:pl-6 sm:text-base">
                       Demos&rarr;
@@ -82,7 +84,9 @@ export default function Home({ posts }) {
                 <Link href="/blog">
                   <span className="relative flex items-center divide-x divide-gray-600 rounded-lg bg-white px-4 py-3 leading-none dark:bg-black sm:px-7 sm:py-4">
                     <span className="flex items-center space-x-3 sm:space-x-5">
-                      <span className="pr-2 text-sm text-gray-900 dark:text-gray-100 sm:pr-3 sm:text-base">🧑‍🚀 Read</span>
+                      <span className="pr-2 text-sm text-gray-900 dark:text-gray-100 sm:pr-3 sm:text-base">
+                        🧑‍🚀 Read
+                      </span>
                     </span>
                     <span className="pl-4 text-sm text-indigo-400 transition duration-200 group-hover:text-gray-900 dark:group-hover:text-gray-100 sm:pl-6 sm:text-base">
                       Blog&rarr;
@@ -95,7 +99,9 @@ export default function Home({ posts }) {
                 <Link href="/about">
                   <span className="relative flex items-center divide-x divide-gray-600 rounded-lg bg-white px-4 py-3 leading-none dark:bg-black sm:px-7 sm:py-4">
                     <span className="flex items-center space-x-3 sm:space-x-5">
-                      <span className="pr-2 text-sm text-gray-900 dark:text-gray-100 sm:pr-3 sm:text-base">🤭 About</span>
+                      <span className="pr-2 text-sm text-gray-900 dark:text-gray-100 sm:pr-3 sm:text-base">
+                        🤭 About
+                      </span>
                     </span>
                     <span className="pl-4 text-sm text-primary-400 transition duration-200 group-hover:text-gray-900 dark:group-hover:text-gray-100 sm:pl-6 sm:text-base">
                       Me&rarr;
@@ -122,8 +128,14 @@ export default function Home({ posts }) {
           {posts.slice(0, MAX_DISPLAY).map((post) => {
             const { slug, date, cover, title, summary, tags } = post
             return (
-              <article key={slug} className="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white transition-all duration-300 hover:shadow-lg dark:border-gray-700 dark:bg-gray-800">
-                <Link href={`/blog/${slug}`} className="relative block aspect-[4/3] overflow-hidden">
+              <article
+                key={slug}
+                className="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white transition-all duration-300 hover:shadow-lg dark:border-gray-700 dark:bg-gray-800"
+              >
+                <Link
+                  href={`/blog/${slug}`}
+                  className="relative block aspect-[4/3] overflow-hidden"
+                >
                   <Image
                     src={cover}
                     width={560}
@@ -152,7 +164,7 @@ export default function Home({ posts }) {
                         <Tag key={tag} text={tag} />
                       ))}
                     </div>
-                    <p className="prose prose-stone mb-3 max-w-none text-sm text-gray-600 dark:text-gray-400 line-clamp-3 sm:mb-4 sm:text-base">
+                    <p className="prose prose-stone mb-3 line-clamp-3 max-w-none text-sm text-gray-600 dark:text-gray-400 sm:mb-4 sm:text-base">
                       {summary}
                     </p>
                   </div>

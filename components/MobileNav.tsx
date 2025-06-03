@@ -25,24 +25,24 @@ const MobileNav = () => {
     const handleTouchStart = (e: TouchEvent) => {
       const touch = e.touches[0]
       const startX = touch.clientX
-      
+
       const handleTouchEnd = (e: TouchEvent) => {
         const touch = e.changedTouches[0]
         const endX = touch.clientX
         const diff = endX - startX
-        
+
         if (diff > 100 && navShow) {
           onToggleNav()
         }
       }
-      
+
       document.addEventListener('touchend', handleTouchEnd, { once: true })
     }
-    
+
     if (navShow) {
       document.addEventListener('touchstart', handleTouchStart)
     }
-    
+
     return () => {
       document.removeEventListener('touchstart', handleTouchStart)
     }
@@ -50,10 +50,10 @@ const MobileNav = () => {
 
   return (
     <>
-      <button 
-        aria-label="Toggle Menu" 
-        onClick={onToggleNav} 
-        className="sm:hidden p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+      <button
+        aria-label="Toggle Menu"
+        onClick={onToggleNav}
+        className="rounded-lg p-2 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800 sm:hidden"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +68,7 @@ const MobileNav = () => {
           />
         </svg>
       </button>
-      
+
       <AnimatePresence>
         {navShow && (
           <motion.div
@@ -79,9 +79,9 @@ const MobileNav = () => {
             className="fixed left-0 top-0 z-10 h-full w-full transform bg-white/95 backdrop-blur-sm dark:bg-gray-950/95"
           >
             <div className="flex justify-end">
-              <button 
-                className="mr-8 mt-11 h-8 w-8 p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors" 
-                aria-label="Toggle Menu" 
+              <button
+                className="mr-8 mt-11 h-8 w-8 rounded-lg p-2 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
+                aria-label="Toggle Menu"
                 onClick={onToggleNav}
               >
                 <svg
@@ -109,7 +109,7 @@ const MobileNav = () => {
                 >
                   <Link
                     href={link.href}
-                    className="text-2xl font-bold tracking-widest text-gray-900 dark:text-gray-100 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
+                    className="text-2xl font-bold tracking-widest text-gray-900 transition-colors hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400"
                     onClick={onToggleNav}
                   >
                     {link.title}

@@ -1,7 +1,6 @@
 import Image from './Image'
 import Link from './Link'
 
-
 const AppCard = ({ title, description, imgSrc, href }) => (
   <div className="md max-w-[544px] p-4 md:w-1/2">
     <div
@@ -15,7 +14,7 @@ const AppCard = ({ title, description, imgSrc, href }) => (
             <Image
               alt={title}
               src={imgSrc}
-              className="object-fill  md:h-80 lg:h-100"
+              className="lg:h-100  object-fill md:h-80"
               width={544}
               height={306}
             />
@@ -24,7 +23,7 @@ const AppCard = ({ title, description, imgSrc, href }) => (
           <Image
             alt={title}
             src={imgSrc}
-            className="object-fill  md:h-80 lg:h-100"
+            className="lg:h-100  object-fill md:h-80"
             width={544}
             height={306}
           />

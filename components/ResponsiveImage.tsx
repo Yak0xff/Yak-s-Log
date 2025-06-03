@@ -29,7 +29,7 @@ const ResponsiveImage = ({
         initial={{ opacity: 0 }}
         animate={{ opacity: isLoading ? 0 : 1 }}
         transition={{ duration: 0.3 }}
-        className="relative w-full h-full"
+        className="relative h-full w-full"
       >
         <Image
           src={src}
@@ -45,11 +45,9 @@ const ResponsiveImage = ({
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </motion.div>
-      {isLoading && (
-        <div className="absolute inset-0 bg-gray-200 dark:bg-gray-800 animate-pulse" />
-      )}
+      {isLoading && <div className="absolute inset-0 animate-pulse bg-gray-200 dark:bg-gray-800" />}
     </div>
   )
 }
 
-export default ResponsiveImage 
+export default ResponsiveImage

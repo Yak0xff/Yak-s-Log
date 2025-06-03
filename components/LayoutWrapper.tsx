@@ -21,11 +21,11 @@ const LayoutWrapper = ({ children }: Props) => {
       <ScrollProgress />
       <div className={`${inter.className} flex min-h-screen flex-col justify-between font-sans`}>
         <Header />
-        <motion.main 
+        <motion.main
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12"
+          className="mx-auto w-full max-w-7xl flex-grow px-4 py-8 sm:px-6 sm:py-12 lg:px-8"
         >
           {children}
         </motion.main>

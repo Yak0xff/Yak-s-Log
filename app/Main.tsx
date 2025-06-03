@@ -7,7 +7,7 @@ import { RoughNotation } from 'react-rough-notation'
 import Projects from './projects/page'
 import Image from 'next/image'
 
-const MAX_DISPLAY = 5
+const MAX_DISPLAY = 12
 
 const slides = ['./static/images/photos/IMG_1027.jpg', './static/images/photos/IMG_1017.jpg']
 
@@ -18,7 +18,7 @@ export default function Home({ posts }) {
         <div className="mb-8 flex flex-col items-center gap-8 sm:mb-12 sm:gap-12 lg:flex-row lg:px-0">
           <div className="w-full pt-6 lg:w-1/2">
             <h1 className="pb-4 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14 lg:text-6xl">
-              Hi, I am{' '}
+              Hi, This is{' '}
               <span className="text-primary-color-500 dark:text-primary-color-dark-500">Yak</span>
             </h1>
             <h2 className="prose pt-4 text-base text-gray-600 dark:text-gray-300 sm:text-lg">
@@ -33,48 +33,34 @@ export default function Home({ posts }) {
               >
                 Yak's Log.
               </RoughNotation>
-              {`${' '}Here will ${siteMetadata.description}. I am a Mobile Application Developer who is passionate about Front Develop and Automation. In my free time, I like developing `}
-              side projects and learning new technologies.
+              {`${' '} `}
+              <br />
+              <br />
+              这里记录着各种生活小点滴，希望你能
+              <RoughNotation
+                animate={true}
+                type="circle"
+                show={true}
+                color="#DE1D8D"
+                animationDelay={1000}
+                animationDuration={2500}
+              >
+                开开心心.
+              </RoughNotation>
+              <br />
+              生活充满乐趣！生命值得追忆！
             </h2>
-            <p className="pt-4 text-base leading-7 text-slate-600 dark:text-slate-300 md:hidden sm:text-lg">
-              This is my place for{' '}
-              <RoughNotation
-                animate={true}
-                type="box"
-                show={true}
-                color="#DE1D8D"
-                animationDelay={1000}
-                animationDuration={2500}
-              >
-                thoughts, reflections & everything
-              </RoughNotation>
-              in between. Have a good read!
-            </p>
-            <p className="hidden pt-6 text-base leading-7 text-slate-600 dark:text-slate-300 md:block sm:text-lg">
-              This is my place for{' '}
-              <RoughNotation
-                animate={true}
-                type="highlight"
-                show={true}
-                color="#DE1D8D"
-                animationDelay={1000}
-                animationDuration={2500}
-              >
-                thoughts, reflections & everything&nbsp;
-              </RoughNotation>
-              in between. Have a good read!{' '}
-              <div className="mt-6 text-slate-600 dark:text-slate-400">
-                <span className="text-sm">Press</span>{' '}
-                <span className="rounded-md bg-gray-300 p-1 text-sm text-gray-900 dark:bg-gray-400">
-                  ⌘
-                </span>{' '}
-                <span className="text-sm">+ </span>
-                <span className="rounded-md bg-gray-300 p-1 text-sm text-gray-900 dark:bg-gray-400">
-                  K
-                </span>{' '}
-                <span className="text-sm">to start</span>
-              </div>
-            </p>
+            <div className="mt-6 text-slate-600 dark:text-slate-400">
+              <span className="text-sm">Press</span>{' '}
+              <span className="rounded-md bg-gray-300 p-1 text-sm text-gray-900 dark:bg-gray-400">
+                ⌘
+              </span>{' '}
+              <span className="text-sm">+ </span>
+              <span className="rounded-md bg-gray-300 p-1 text-sm text-gray-900 dark:bg-gray-400">
+                K
+              </span>{' '}
+              <span className="text-sm">to start</span>
+            </div>
           </div>
           <div className="w-full lg:w-1/2">
             <div className="grid grid-cols-1 gap-4 py-8 sm:gap-6 sm:py-12">

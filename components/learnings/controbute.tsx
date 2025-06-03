@@ -35,10 +35,10 @@ const getDayEelents = (): ReactElement[] => {
   return dayList
 }
 
-const getLevelElements = (): ReactElement[] => {
+const getLevelElements = (levels: number[]): ReactElement[] => {
   const levelList: ReactElement[] = []
   for (let i = 1; i <= 365; i++) {
-    const level = Math.floor(Math.random() * 3) + 1
+    const level = levels[i - 1] || 1
     levelList.push(
       <li key={i} data-level={level} className="tooltip">
         <span className="tooltiptext">{level} Points.</span>
@@ -48,7 +48,11 @@ const getLevelElements = (): ReactElement[] => {
   return levelList
 }
 
-const GitHubControbute = () => {
+interface GitHubControbuteProps {
+  levels: number[]
+}
+
+const GitHubControbute = ({ levels }: GitHubControbuteProps) => {
   return (
     <>
       <div className="pt-6 text-center xl:pb-4">
@@ -60,7 +64,7 @@ const GitHubControbute = () => {
                                 hover:duration-300
                                 dark:text-gray-100"
         >
-          <h2
+          <div
             className="text-3xl
                     font-extrabold
                     tracking-tight
@@ -69,12 +73,12 @@ const GitHubControbute = () => {
                      dark:text-gray-100"
           >
             GitHub Contribution Graph with CSS 🔗
-          </h2>
+          </div>
         </Link>
         <div className="graph">
           <ul className="months">{getMonthElements()}</ul>
           <ul className="days">{getDayEelents()}</ul>
-          <ul className="squares">{getLevelElements()}</ul>
+          <ul className="squares">{getLevelElements(levels)}</ul>
         </div>
       </div>
     </>

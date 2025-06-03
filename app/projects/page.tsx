@@ -6,6 +6,8 @@ import GitHubControbute from '@/components/learnings/controbute'
 export const metadata = genPageMetadata({ title: 'Demos' })
 
 export default function Projects() {
+  // 生成 365 个 1~3 的随机数
+  const levels = Array.from({ length: 365 }, () => Math.floor(Math.random() * 3) + 1)
   return (
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -17,7 +19,7 @@ export default function Projects() {
             My Some side Demos with next.js and tailwindcss. Maybe include others.
           </p>
         </div>
-        <GitHubControbute />
+        <GitHubControbute levels={levels} />
         <div className="container py-12">
           <div className="-m-4 flex flex-wrap">
             {projectsData.map((d) => (
